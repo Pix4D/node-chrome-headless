@@ -3,7 +3,7 @@ FROM buildpack-deps:jessie
 # FROM ubuntu:xenial
 # FROM google/debian:jessie
 
-MAINTAINER Albert Yu <yukinying@gmail.com>
+MAINTAINER Shubham Kanodia 
 
 RUN apt-get update -qqy \
   && apt-get -qqy install \
