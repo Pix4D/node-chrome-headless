@@ -1,7 +1,5 @@
-FROM buildpack-deps:jessie
-
 # FORKED FROM pastelsky/node-chrome-headless
-
+FROM buildpack-deps:jessie
 # FROM debian:stable-slim
 # FROM ubuntu:xenial
 # FROM google/debian:jessie
