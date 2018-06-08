@@ -9,6 +9,6 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: bash scripts/deploy.sh
+  script: bash deploy.sh
   on:
     branch: master
