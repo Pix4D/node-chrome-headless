@@ -1,10 +1,8 @@
 sudo: required #is required to use docker service in travis
 dist: trusty
+language: generic
 
-script:
-  - docker --version
-  - docker build -t node-chrome-headless .
-  - docker images
+script: bash build.sh
 
 deploy:
   - provider: script
