@@ -1,0 +1,15 @@
+sudo: required #is required to use docker service in travis
+dist: trusty
+
+script:
+  - docker --version
+  - docker build -t node-chrome-headless .
+  - docker images
+
+deploy:
+  - provider: script
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker tag node-chrome-headless $DOCKER_TEAM/node-chrome-headless
+    - docker push $DOCKER_TEAM/node-chrome-headless
+  on:
+    branch: master
