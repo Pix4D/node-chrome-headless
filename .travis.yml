@@ -3,7 +3,8 @@ dist: trusty
 
 script:
   - docker --version
-  - docker build --no-cache -t node-chrome-headless -f Dockerfile context
+  - cp ./Dockerfile ./context/
+  - docker build --no-cache -t node-chrome-headless context
   - docker images
 
 deploy:
