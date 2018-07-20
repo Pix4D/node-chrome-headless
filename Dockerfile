@@ -12,6 +12,7 @@ LABEL name="node-chrome-headless" \
 RUN apt-get update -qqy \
   && apt-get -qqy install \
   wget ca-certificates apt-transport-https \
+  jq \
   ttf-wqy-zenhei ttf-unfonts-core \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
